@@ -8,17 +8,17 @@ import {LangSwitcherComponent, MultilingualService} from '../index';
 
 const SUPPORTED_LANGUAGES: Array<ILang> = [
   { code: 'en', title: 'English' },
-  { code: 'es', title: 'Spanish' },
-  { code: 'fr', title: 'French' },
-  { code: 'ru', title: 'Russian' },
-  { code: 'bg', title: 'Bulgarian' }
+  // { code: 'es', title: 'Spanish' },
+  // { code: 'fr', title: 'French' },
+  // { code: 'ru', title: 'Russian' },
+  // { code: 'bg', title: 'Bulgarian' }
 ];
 
 export function main() {
   t.describe('i18n.framework: @Component: LangSwitcherComponent', () => {
- 
+
     t.bep(() => TEST_COMPONENT_PROVIDERS({http: true, state: true, router: { primary: TestComponent }}));
-    
+
     t.it('should work',
       t.inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.createAsync(TestComponent)
@@ -30,11 +30,11 @@ export function main() {
           });
       }));
   });
-  
+
   t.describe('i18n.framework: @Component: LangSwitcherComponent with multiple languages', () => {
     t.be(() => MultilingualService.SUPPORTED_LANGUAGES = SUPPORTED_LANGUAGES);
     t.bep(() => TEST_COMPONENT_PROVIDERS({http: true, state: true, router: { primary: TestComponent }}));
-    
+
     t.it('should work',
       t.inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
         return tcb.createAsync(TestComponent)
@@ -51,7 +51,7 @@ export function main() {
       }));
 
     // ensure statics are reset when the test had modified statics in a beforeEach (be) or beforeEachProvider (bep)
-    t.ae(() => TEST_MULTILINGUAL_RESET());    
+    t.ae(() => TEST_MULTILINGUAL_RESET());
   });
 }
 
