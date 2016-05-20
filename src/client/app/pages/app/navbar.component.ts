@@ -8,8 +8,8 @@ import {RouteComponent} from '../../frameworks/core.framework/index';
 
 @RouteComponent({
   selector: 'sd-navbar',
-  templateUrl: './app/components/app/navbar.component.html',
-  styleUrls: ['./app/components/app/navbar.component.css']
+  templateUrl: './app/pages/app/navbar.component.html',
+  styleUrls: ['./app/pages/app/navbar.component.css']
 })
 export class NavbarComponent {
   // TODO: remove when {N} router supports active states

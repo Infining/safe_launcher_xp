@@ -14,7 +14,7 @@ import {WindowService, ConsoleService, CORE_PROVIDERS} from './app/frameworks/co
 import {ANALYTICS_PROVIDERS} from './app/frameworks/analytics.framework/index';
 import {MultilingualService} from './app/frameworks/i18n.framework/index';
 import {APP_PROVIDERS, AppConfigService} from './app/frameworks/app.framework/index';
-import {AppComponent} from './app/components/app/app.component';
+import {AppComponent} from './app/pages/app/app.component';
 // custom i18n language support
 MultilingualService.SUPPORTED_LANGUAGES = AppConfigService.SUPPORTED_LANGUAGES;
 
@@ -23,7 +23,7 @@ if ('<%= ENV %>' === 'prod' || '<%= TARGET_DESKTOP_BUILD %>' === 'true') {
   enableProdMode();
 } else {
   ENV_PROVIDERS.push(ELEMENT_PROBE_PROVIDERS);
-} 
+}
 
 let BOOTSTRAP_PROVIDERS: any[] = [
   ENV_PROVIDERS,
@@ -39,7 +39,7 @@ if ('<%= TARGET_DESKTOP %>' === 'true') {
   CoreConfigService.PLATFORM_TARGET = CoreConfigService.PLATFORMS.DESKTOP;
   // desktop (electron) must use hash
   BOOTSTRAP_PROVIDERS.push(provide(LocationStrategy, {useClass: HashLocationStrategy}));
-}  
+}
 
 bootstrap(AppComponent, BOOTSTRAP_PROVIDERS)
 .catch((err:any) => console.error(err));

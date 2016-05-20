@@ -2,7 +2,7 @@
 //
 // import { provide } from '@angular/core';
 // import { ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy } from '@angular/common';
-// import { AppCmp } from './app/components/app';
+// import { AppCmp } from './app/pages/app';
 
 // System.import('//localhost:<%= HOT_LOADER_PORT %>/ng2-hot-loader')
 //   .then(loader => {

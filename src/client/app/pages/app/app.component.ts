@@ -15,7 +15,7 @@ import {AboutComponent} from '../about/about.component';
 @RouteComponent({
   selector: 'sd-app',
   viewProviders: [NameListService],
-  templateUrl: './app/components/app/app.component.html',
+  templateUrl: './app/pages/app/app.component.html',
   directives: [LangSwitcherComponent, NavbarComponent, ToolbarComponent, PlatformDirective],
   changeDetection: ChangeDetectionStrategy.Default // Everything else uses OnPush
 })
