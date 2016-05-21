@@ -26,7 +26,7 @@ export class SeedAdvancedConfig extends SeedConfig {
     } 
     this.BOOTSTRAP_MODULE = bootstrap;
     
-    this.APP_TITLE = 'Angular 2 Seed Advanced';
+    this.APP_TITLE = 'SAFE Launcher XP';
 
     // Dev
     if (this.TARGET_DESKTOP) {

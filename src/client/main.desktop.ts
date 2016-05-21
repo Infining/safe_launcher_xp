@@ -15,9 +15,9 @@ let menu: any;
 import {AppConfigService} from './app/frameworks/app.framework/services/app-config.service';
 
 crashReporter.start({
-  productName: 'Angular2SeedAdvanced',
-  companyName: 'NathanWalker',
-  submitURL: 'https://github.com/NathanWalker/angular2-seed-advanced',
+  productName: 'SAFELauncherXP',
+  companyName: 'Infining',
+  submitURL: 'https://github.com/Infining/safe_launcher_xp',
   autoSubmit: true
 });
 
@@ -46,9 +46,9 @@ app.on('ready', () => {
 
   mainWindow.webContents.on('did-navigate-in-page', (e: any, url: string) => {
     console.log(`Page navigated: ${url}`);
-  });  
+  });
 
-  let appTitle: string = `Angular 2 Seed Advanced`;  
+  let appTitle: string = `SAFE Launcher XP`;
 
   let langMenu: any = {
     label: 'Language',
@@ -71,40 +71,25 @@ app.on('ready', () => {
     submenu: [{
       label: 'Learn More',
       click:() => {
-        shell.openExternal('https://github.com/NathanWalker/angular2-seed-advanced');
+        shell.openExternal('https://github.com/Infining/safe_launcher_xp');
       }
     }, {
         label: 'Issues',
         click:() => {
-          shell.openExternal('https://github.com/NathanWalker/angular2-seed-advanced/issues');
+          shell.openExternal('https://github.com/Infining/safe_launcher_xp/issues');
         }
       }, {
-        label: `My Amazing Parent: Minko Gechev's Angular 2 Seed`,
+        label: `SAFE Network`,
         click:() => {
-          shell.openExternal('https://github.com/mgechev/angular2-seed');
+          shell.openExternal('https://safenetwork.org/');
         }
       }, {
-        label: 'Angular 2',
+        label: 'SAFE Network Forum',
         click:() => {
-          shell.openExternal('https://angular.io/');
-        }
-      }, {
-        label: 'Electron',
-        click:() => {
-          shell.openExternal('http://electron.atom.io/');
-        }
-      }, {
-        label: 'Electron Docs',
-        click: () => {
-          shell.openExternal('https://github.com/atom/electron/tree/master/docs');
-        }
-      }, {
-        label: 'Codeology Visualization',
-        click:() => {
-          shell.openExternal('http://codeology.braintreepayments.com/nathanwalker/angular2-seed-advanced');
+          shell.openExternal('https://forum.safenetwork.io/');
         }
       }]
-  };  
+  };
 
   if (process.platform === 'darwin') {
     template = [{
@@ -120,7 +105,7 @@ app.on('ready', () => {
         }, {
           type: 'separator'
         }, {
-          label: 'Hide Angular 2 Seed Advanced',
+          label: 'Hide SAFE Launcher XP',
           accelerator: 'Command+H',
           selector: 'hide:'
         }, {
