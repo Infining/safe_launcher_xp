@@ -41,7 +41,8 @@
     "e2e.ci": "gulp build.prod --color && gulp build.js.e2e --color && gulp e2e --color",
     "tests.all": "npm test && npm run e2e.ci",
     "webdriver-start": "node_modules/protractor/bin/webdriver-manager start",
-    "webdriver-update": "node_modules/protractor/bin/webdriver-manager update"
+    "webdriver-update": "node_modules/protractor/bin/webdriver-manager update",
+    "merge": "git fetch upstream && git merge --no-commit upstream/master"
   },
   "author": "Minko Gechev <mgechev>",
   "contributors": [
