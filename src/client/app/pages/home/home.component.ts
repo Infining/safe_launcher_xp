@@ -11,18 +11,8 @@ import {NameListService} from '../../frameworks/app.framework/index';
   styleUrls: ['./app/pages/home/home.component.css']
 })
 export class HomeComponent {
-  public newName: string = '';
-  constructor(private store: Store<any>, public nameListService: NameListService) { 
+  constructor() {
 
   }
-  
-  /*
-   * @param newname  any text as input.
-   * @returns return false to prevent default form submit behavior to refresh the page.
-   */
-  addName(): boolean {
-    this.nameListService.add(this.newName);
-    this.newName = '';
-    return false;
-  }
+
 }
