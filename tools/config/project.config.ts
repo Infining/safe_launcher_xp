@@ -12,7 +12,7 @@ export class ProjectConfig extends SeedAdvancedConfig {
 
   constructor() {
     super();
-    // this.APP_TITLE = 'Put name of your app here';
+     this.APP_TITLE = 'SAFE Launcher XP';
     let additional_deps: InjectableDependency[] = [
       // {src: 'jquery/dist/jquery.min.js', inject: 'libs'},
     ];
