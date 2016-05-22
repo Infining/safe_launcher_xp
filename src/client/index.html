@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- inject:css -->
   <!-- endinject -->
-
+  
   <% if (TARGET_DESKTOP) { %>
   <!-- shims:js -->
   <!-- endinject -->
@@ -82,6 +82,10 @@
         'Report this error at https://github.com/NathanWalker/angular2-seed-advanced/issues');
     });
   </script>
+  <% } %>
+
+  <% if (TARGET_DESKTOP && ENV !== 'prod') { %>
+  <script>require('electron-connect').client.create()</script>
   <% } %>
 
 </body>

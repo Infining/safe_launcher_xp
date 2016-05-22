@@ -1,4 +1,4 @@
-// convenient shorthand 
+// convenient shorthand
 import {Ng2Jasmine, TestApi} from './shorthand/ng2-jasmine';
 export const t: TestApi = Ng2Jasmine;
 
@@ -13,6 +13,7 @@ export * from './mocks/ng2-translate/ng2-translate.mock';
 
 // providers
 export * from './providers/common';
+export * from './providers/http';
 export * from './providers/i18n';
 export * from './providers/router';
 export * from './providers/component';
